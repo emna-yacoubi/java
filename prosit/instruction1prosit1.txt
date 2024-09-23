@@ -1,0 +1,16 @@
+public class ZooManegement{
+
+    public static int nbrCages=20;
+    public static String zooName = "my zoo";
+
+    public ZooManegement() {
+
+        System.out.println(zooName + " comporte " + nbrCages + " cages");
+    }
+
+    // Méthode principale pour exécuter le programme
+    public static void main(String[] args) {
+
+        new ZooManegement();
+    }
+}

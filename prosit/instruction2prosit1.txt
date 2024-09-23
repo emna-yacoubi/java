@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class ZooManegement {
+    // Déclaration des variables d'instance
+    private int nbrCages;
+    private String zooName;
+
+    // Constructeur de la classe principale
+    public ZooManegement() {
+        // Création d'un objet Scanner pour lire les entrées de l'utilisateur
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander à l'utilisateur de saisir le nom du zoo
+        System.out.print("Entrez le nom du zoo : ");
+        zooName = scanner.nextLine();
+
+        // Demander à l'utilisateur de saisir le nombre de cages
+        System.out.print("Entrez le nombre de cages : ");
+
+        // Valider que l'utilisateur saisit un nombre entier positif
+        while (!scanner.hasNextInt()) {
+            System.out.println("Veuillez entrer un nombre entier valide.");
+            scanner.next(); // Consomme l'entrée incorrecte
+        }
+        nbrCages = scanner.nextInt();
+
+        // Affichage du message
+        System.out.println(zooName + " comporte " + nbrCages + " cages");
+
+        // Fermeture du scanner
+        scanner.close();
+    }
+
+    // Méthode main pour exécuter le programme
+    public static void main(String[] args) {
+        // Création de l'objet ZooManagement pour déclencher l'affichage
+        new ZooManegement();
+    }
+}
